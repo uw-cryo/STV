@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Install Ames Stereo Pipeline (ASP) binary 
+# Pick you version 
+# https://github.com/NeoGeographyToolkit/StereoPipeline/releases/download/2.7.0/StereoPipeline-2.7.0-2020-07-29-x86_64-Linux.tar.bz2
+# https://github.com/NeoGeographyToolkit/StereoPipeline/releases/download/3.0.0/StereoPipeline-3.0.0-2021-07-27-x86_64-Linux.tar.bz2
+# https://github.com/NeoGeographyToolkit/StereoPipeline/releases/download/3.1.0/StereoPipeline-3.1.0-2022-05-18-x86_64-Linux.tar.bz2
+
+DATE='2022-05-18'
+VERSION="3.1.0"
+NAME=StereoPipeline-$VERSION-$DATE-x86_64-Linux
+wget -q https://github.com/NeoGeographyToolkit/StereoPipeline/releases/download/$VERSION/$NAME.tar.bz2
+tar -xjf $NAME.tar.bz2
+mv $NAME /srv/StereoPipeline
+rm $NAME.tar.bz2
+
+# Install DART binary 
+# TODO
+
+# EOF
